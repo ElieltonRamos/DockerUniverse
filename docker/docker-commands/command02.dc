@@ -1,0 +1,2 @@
+docker container create -it --name 01container alpine:3.12
+docker container start 01container
