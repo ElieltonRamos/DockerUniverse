@@ -10,8 +10,8 @@ RUN tar -xzvf node_modules.tar.gz
 
 COPY . .
 
-RUN apk add --update npm
+ENTRYPOINT [ "npm" ]
 
-RUN [ "npm install" ]
+RUN npm install
 
-CMD [ "npm, start" ]
+CMD [ "start" ]
