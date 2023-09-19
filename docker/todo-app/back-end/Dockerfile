@@ -6,8 +6,12 @@ WORKDIR /app/back-end
 
 COPY node_modules.tar.gz .
 
+RUN tar -xzvf node_modules.tar.gz
+
 COPY . .
+
+RUN apk add --update npm
 
 RUN [ "npm install" ]
 
-CMD [ "npm start" ]
+CMD [ "npm, start" ]
